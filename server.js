@@ -25,7 +25,7 @@ app.get('/:symbol', (req, res)=>{
     axios.get(url)
     .then((response)=>{
         console.log(response)
-        res.send(response)})
+        res.send(response.data)})
 })
 
 app.listen(PORT, ()=>{
