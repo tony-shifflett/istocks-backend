@@ -1,6 +1,14 @@
+require('dotenv').config();
+
+
 const express = require('express');
 const app = express();
-const port = 3000;
+const PORT = 3000;
+
+app.get('/', (res, req)=>{
+    console.log("Default route")
+})
+
 app.listen(PORT, ()=>{
     console.log(`listening on port ${PORT}`);
 });
