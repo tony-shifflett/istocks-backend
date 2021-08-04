@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(morgan("tiny"));
 
 
-app.get('/', (res, req)=>{
+app.get('/', (req, res)=>{
     console.log('get--res', res)
     res.send('Default Route')
 })
