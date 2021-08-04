@@ -13,7 +13,8 @@ app.use(morgan("tiny"));
 
 
 app.get('/', (res, req)=>{
-    console.log("Default route")
+    console.log('get--res', res)
+    res.send('Default Route')
 })
 
 app.listen(PORT, ()=>{
