@@ -27,6 +27,14 @@ app.get('/:symbol', (req, res)=>{
         res.send(response.data)})
 })
 
+app.get('/details/:symbol', (req, res)=>{
+    const symbol = req.params.symbol;
+    const url =`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=${API_KEY}`;
+    axios.get(url)
+    .then((response)=>{
+        res.send(response.data)})
+})
+
 app.listen(PORT, ()=>{
     console.log(`listening on port ${PORT}`);
 });
