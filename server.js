@@ -1,6 +1,6 @@
 require('dotenv').config();
-const PORT = process.env.PORT||4000;
-const API_KEY = process.env.API_KEY||"489e175a588d5c045f3445900c7b56e9";
+const PORT = process.env.PORT;
+const API_KEY = process.env.API_KEY;
 
 const express = require('express');
 const morgan = require("morgan");
