@@ -1,6 +1,6 @@
 require('dotenv').config();
-const PORT = process.env.PORT;
-const API_KEY = process.env.API_KEY;
+const PORT = process.env.PORT||4000;
+const API_KEY = process.env.API_KEY||"489e175a588d5c045f3445900c7b56e9";
 
 const express = require('express');
 const morgan = require("morgan");
@@ -24,7 +24,6 @@ app.get('/:symbol', (req, res)=>{
     const url =`https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=${API_KEY}`;
     axios.get(url)
     .then((response)=>{
-        console.log(response.data)
         res.send(response.data)})
 })
 
